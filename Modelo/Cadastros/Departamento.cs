@@ -1,4 +1,4 @@
-﻿namespace InstituicaoMVC.Models
+﻿namespace Modelo.Cadastros
 {
     public class Departamento
     {

@@ -1,5 +1,6 @@
 ﻿using InstituicaoMVC.Models;
 using Microsoft.EntityFrameworkCore;
+using Modelo.Cadastros;
 
 namespace InstituicaoMVC.Data
 {

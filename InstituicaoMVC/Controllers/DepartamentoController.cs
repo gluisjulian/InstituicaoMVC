@@ -1,10 +1,8 @@
 ﻿using InstituicaoMVC.Data;
-using InstituicaoMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+using Modelo.Cadastros;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -30,11 +28,7 @@ namespace InstituicaoMVC.Controllers
         public IActionResult Create()
         {
             var instituicoes = _context.Instituicoes.OrderBy(i => i.Nome).ToList();
-            instituicoes.Insert(0, new Instituicao()
-            {
-                InstituicaoID = 0,
-                Nome = "Selecione a instituição"
-            });
+            instituicoes.Insert(0, new Instituicao() { InstituicaoID = 0, Nome = "Selecione a Instituição" });
             ViewBag.Instituicoes = instituicoes;
             return View();
         }
